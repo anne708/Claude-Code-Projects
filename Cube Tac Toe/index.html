@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cube Tac Toe</title>
+  <link rel="stylesheet" href="style.css" />
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+      "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+    }
+  }
+  </script>
+</head>
+<body>
+  <div id="app">
+    <header id="hud">
+      <h1>Cube Tac Toe</h1>
+      <p id="status">Player 1 (X): place your mark</p>
+      <button id="new-game">New Game</button>
+    </header>
+
+    <div id="stage"></div>
+
+    <footer id="controls">
+      <p class="controls-hint">Drag to rotate the cube &middot; scroll to zoom</p>
+      <div id="move-buttons">
+        <div class="move-group">
+          <button class="move-btn" data-move="U">U</button>
+          <button class="move-btn" data-move="U'">U&prime;</button>
+          <button class="move-btn" data-move="D">D</button>
+          <button class="move-btn" data-move="D'">D&prime;</button>
+        </div>
+        <div class="move-group">
+          <button class="move-btn" data-move="L">L</button>
+          <button class="move-btn" data-move="L'">L&prime;</button>
+          <button class="move-btn" data-move="R">R</button>
+          <button class="move-btn" data-move="R'">R&prime;</button>
+        </div>
+        <div class="move-group">
+          <button class="move-btn" data-move="F">F</button>
+          <button class="move-btn" data-move="F'">F&prime;</button>
+          <button class="move-btn" data-move="B">B</button>
+          <button class="move-btn" data-move="B'">B&prime;</button>
+        </div>
+      </div>
+    </footer>
+
+    <div id="banner" class="hidden">
+      <div class="banner-box">
+        <p id="banner-text"></p>
+        <button id="banner-new-game">Play Again</button>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="main.js"></script>
+</body>
+</html>
